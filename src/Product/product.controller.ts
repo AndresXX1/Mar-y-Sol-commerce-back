@@ -11,7 +11,7 @@ interface Order {
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
-  @Post(':collectionId/types')
+  @Post(':collectionId/create')
   create(@Body() createProductDto: CreateProductDto, @Param('collectionId') collectionId: string) {
     return this.productsService.createProduct(collectionId, createProductDto);
   }

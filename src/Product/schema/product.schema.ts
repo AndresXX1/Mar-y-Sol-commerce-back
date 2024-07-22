@@ -15,23 +15,22 @@ export class Product {
     @Prop({ required: true, type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Booking'}]})
     booking: string[];
 
-    @Prop({ required: true })
-    location: string;
+    // @Prop({ required: true })
+    // location: string;
 
-    @Prop({ required: true })
-    equipment: string[];
+    // @Prop({ required: true })
+    // equipment: string[];
 
     @Prop({ required: false })
-    type: string[];
+    size: string[];
 
     @Prop({ required: true })
-    floorNumber: number;    
+    color: number;    
 
     @Prop()
     images: string[];
 
-    @Prop({ required: true })
-    plans: string;
+
 
     @Prop({ defaultOptions: ['Activo', 'Inactivo'] })
     state: string;

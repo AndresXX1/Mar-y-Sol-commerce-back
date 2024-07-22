@@ -11,13 +11,13 @@ import { ColectionService } from './colection.service';
 import { CreateColectionDto } from './dto/create-Colection.dto';
 import { UpdateColectionDto } from './dto/update-Colection.dto';
 
-@Controller('buildings')
+@Controller('collection')
 export class ColectionController {
   constructor(private readonly ColectionService: ColectionService) {}
 
   @Post('/create')
-  async create(@Body() createBuildingDto: CreateColectionDto) {
-    return await this.ColectionService.createBuilding(createBuildingDto);
+  async create(@Body() CreateColectionDto: CreateColectionDto) {
+    return await this.ColectionService.createColection(CreateColectionDto);
   }
 
   @Get()
@@ -35,11 +35,11 @@ export class ColectionController {
     @Param('id') id: string,
     @Body() updateBuildingDto: UpdateColectionDto,
   ) {
-    return this.ColectionService.updateBuilding(id, updateBuildingDto);
+    return this.ColectionService.updateColection(id, updateBuildingDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.ColectionService.removeBuilding(id);
+    return this.ColectionService.removeColection(id);
   }
 }

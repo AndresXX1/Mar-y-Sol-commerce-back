@@ -11,7 +11,7 @@ export class ColectionService {
     @InjectModel(Colection.name) private readonly ColectionModel: Model<Colection>,
   ) {}
 
-  async createBuilding(
+  async createColection(
     createColectionDto: CreateColectionDto,
   ): Promise<Colection> {
     try {
@@ -30,7 +30,7 @@ export class ColectionService {
   async findAll(): Promise<Colection[]> {
     const buildings = await this.ColectionModel
       .find()
-      .populate('rooms')
+      .populate('products')
       .lean()
       .exec();
     return buildings;
@@ -39,28 +39,28 @@ export class ColectionService {
   async findOne(id: string): Promise<Colection> {
     const building = await this.ColectionModel
       .findById(id)
-      .populate('rooms')
+      .populate('products')
       .lean()
       .exec();
     return building;
   }
 
-  async updateBuilding(
+  async updateColection(
     id: string,
     updateColectionDto: UpdateColectionDto,
   ): Promise<Colection> {
     const buildingUpdated = await this.ColectionModel
       .findByIdAndUpdate(id, updateColectionDto, { new: true })
-      .populate('rooms')
+      .populate('products')
       .lean()
       .exec();
     return buildingUpdated;
   }
 
-  async removeBuilding(id: string): Promise<Colection> {
+  async removeColection(id: string): Promise<Colection> {
     const buildingDeleted = await this.ColectionModel
       .findByIdAndDelete(id)
-      .populate('rooms')
+      .populate('products')
       .lean()
       .exec();
     return buildingDeleted;

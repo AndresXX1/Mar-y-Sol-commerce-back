@@ -8,23 +8,23 @@ export class CreateColectionDto {
 
   @IsString()
   @IsNotEmpty()
-  address: string;
+  seasson: string;
 
   @IsString()
   @IsNotEmpty()
   description: string;
 
-  @IsString()
-  @IsNotEmpty()
-  city: string;
+  // @IsString()
+  // @IsNotEmpty()
+  // city: string;
 
-  @IsString()
-  @IsNotEmpty()
-  country: string;
+  // @IsString()
+  // @IsNotEmpty()
+  // country: string;
 
-  @IsString()
-  @IsNotEmpty()
-  owner: string;
+  // @IsString()
+  // @IsNotEmpty()
+  // owner: string;
   
   @IsString()
   @IsNotEmpty()

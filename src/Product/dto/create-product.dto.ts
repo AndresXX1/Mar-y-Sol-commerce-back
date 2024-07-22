@@ -10,24 +10,23 @@ export class CreateProductDto {
     @IsNotEmpty()
     booking: Booking[];
     
-    @IsString()
-    @IsNotEmpty()
-    location: string;
+    // @IsString()
+    // @IsNotEmpty()
+    // location: string;
     
     
-    @IsNotEmpty()
-    equipment: string[];
+    // @IsNotEmpty()
+    // equipment: string[];
     
     @IsArray()
     @IsOptional()
-    type: string[];
+    size: string[];
     
     @IsNumber()
     @IsNotEmpty()
-    floorNumber: number;
+    color: number;
 
-    @IsString()
-    plans: string;
+
 
     @IsString()
     description: string;

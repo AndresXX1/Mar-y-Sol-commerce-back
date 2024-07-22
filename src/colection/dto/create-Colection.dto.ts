@@ -1,5 +1,5 @@
 import { IsString, IsNotEmpty } from 'class-validator';
-import { Product } from 'src/product/schema/product.schema';
+import { Product } from '../../Product/schema/product.schema';
 
 export class CreateColectionDto {
   @IsString()

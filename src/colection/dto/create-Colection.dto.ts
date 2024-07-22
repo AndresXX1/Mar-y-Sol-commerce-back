@@ -1,7 +1,7 @@
 import { IsString, IsNotEmpty } from 'class-validator';
-import { Room } from 'src/rooms/schema/rooms.schema';
+import { Product } from 'src/product/schema/product.schema';
 
-export class CreateBuildingDto {
+export class CreateColectionDto {
   @IsString()
   @IsNotEmpty()
   name: string;

@@ -3,10 +3,10 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { BookingsModule } from './bookings/bookings.module';
-import { RoomsModule } from './rooms/rooms.module';
+import { ProductModule } from './product/product.module';
 import { MailerModule } from './mailer/mailer.module';
 import { ConfigModule } from '@nestjs/config';
-import { BuildingsModule } from './buildings/buildings.module';
+import { ColectionModule } from './colection/colection.module';
 
 @Module({
   imports: [
@@ -18,9 +18,9 @@ import { BuildingsModule } from './buildings/buildings.module';
     ),
     AuthModule,
     UserModule,
-    BuildingsModule,
+    ColectionModule,
     BookingsModule,
-    RoomsModule,
+    ProductModule,
     MailerModule,
   ],
 })

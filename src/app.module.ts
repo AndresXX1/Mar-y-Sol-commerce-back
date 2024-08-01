@@ -14,7 +14,7 @@ import { ColectionModule } from './colection/colection.module';
       isGlobal: true,
     }),
     MongooseModule.forRoot(
-      'mongodb+srv://av5328881:YVIAJlchzQE4rFKT@maridbs.qfwnoaq.mongodb.net/?retryWrites=true&w=majority&appName=MariDBs',
+      'mongodb+srv://av5328881:b5JkQtmqN8RMMsT7@mariii.42kulhz.mongodb.net/?retryWrites=true&w=majority&appName=Mariii',
     ),
     AuthModule,
     UserModule,

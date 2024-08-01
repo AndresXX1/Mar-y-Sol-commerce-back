@@ -15,8 +15,8 @@ export class Product {
     @Prop({ required: true, type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Booking'}]})
     booking: string[];
 
-    // @Prop({ required: true })
-    // location: string;
+    @Prop({ required: true })
+    offer: string;
 
     // @Prop({ required: true })
     // equipment: string[];
@@ -31,6 +31,8 @@ export class Product {
     images: string[];
 
 
+    @Prop()
+    plans: string[];
 
     @Prop({ defaultOptions: ['Activo', 'Inactivo'] })
     state: string;

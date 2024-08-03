@@ -22,8 +22,8 @@ export class Colection
   // @Prop({ required: true })
   // country: string;
 
-  // @Prop({ required: true })
-  // owner: string;
+  @Prop({ required: true })
+  state: string;
   
   @Prop()
   blueprints: string;

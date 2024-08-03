@@ -22,9 +22,9 @@ export class CreateColectionDto {
   // @IsNotEmpty()
   // country: string;
 
-  // @IsString()
-  // @IsNotEmpty()
-  // owner: string;
+  @IsString()
+  @IsNotEmpty()
+  state: string;
   
   @IsString()
   @IsNotEmpty()

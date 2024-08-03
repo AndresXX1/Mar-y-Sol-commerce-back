@@ -22,14 +22,17 @@ export class CreateProductDto {
     @IsOptional()
     size: string[];
     
-    @IsNumber()
+    @IsArray()
     @IsNotEmpty()
-    color: number;
+    color: string[];
 
 
 
     @IsString()
-    description: string;
+    description: string[];
+
+    @IsString()
+    plans: string;
 
     @IsArray()
     images: string[];

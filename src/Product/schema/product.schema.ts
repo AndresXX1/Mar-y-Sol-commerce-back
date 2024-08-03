@@ -15,7 +15,7 @@ export class Product {
     @Prop({ required: true, type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Booking'}]})
     booking: string[];
 
-    @Prop({ required: true })
+    @Prop({ required: false })
     offer: string;
 
     // @Prop({ required: true })
@@ -24,8 +24,8 @@ export class Product {
     @Prop({ required: false })
     size: string[];
 
-    @Prop({ required: true })
-    color: number;    
+    @Prop({ required: false })
+    color: string[];    
 
     @Prop()
     images: string[];
